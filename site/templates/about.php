@@ -1,55 +1,60 @@
+<?php
+$links = $page->children()->first()->links()->toStructure(); 
+?>
+
 <?php snippet('header') ?>
+<?php snippet('_mobile-header')?>
 
-  <main class="main" role="main">
-
-    <div class="wrap">
-      
-      <header>
-        <h1><?= $page->title()->html() ?></h1>
-        <div class="intro text">
-          <?= $page->intro()->kirbytext() ?>
-        </div>
-        <hr />
-      </header>
-      
-      <div class="text">
-        <?= $page->text()->kirbytext() ?>
+<div id="body-wrapper-about">
+  <main id="main" class="main about" role="main">
+    <div class="about-content">
+      <div class="about-right-margin">
+        
       </div>
-      
+      <div class="about-right-side">
+        <?php if($image = $page->images()->sortBy('sort', 'asc')->first()): $aboutImg = $image; ?>
+          <div class="about-image-container">
+            <div 
+              id="largeimg"
+              class="about-image"
+              data-imgurl="<?= $aboutImg->url() ?>"
+              style="">
+            </div>
+            <script type="text/javascript">
+              const img = new Image();
+              const x = document.querySelector('.about-image');
+
+              img.onload = function() {
+                x.style.backgroundImage = `url('${img.src}')`;
+                x.classList.add('fetched');
+              }
+
+              img.src = x.dataset.imgurl;
+            </script>
+          </div>
+        <?php endif ?>
+      </div>
+      <div class="about-main">
+        <section class="about-me">
+          <div class="about-body">
+            <h3><?= $page->title()->html()?></h3>
+            <?= $page->intro()->kirbytext() ?>
+          </div>
+          <div class="about-contact">
+            <h3>Contact or follow me!</h3>
+            <ul class="contact-list">
+              <?php foreach($links as $link): ?>
+                <li>
+                  <a class="default" href="<?= $link->linkurl()->url() ?>"><?= $link->linkname()->html() ?></a>
+                </li>
+              <?php endforeach ?>
+            </ul>
+          </div>
+        </section>
+      </div>
     </div>
-    
-    <section class="team wrap wide">
-      
-      <h2>Our Purring Team</h2>
-
-      <ul class="team-list grid gutter-1">
-        <?php foreach($page->children()->visible() as $member): ?>
-          <li class="team-item column">
-            
-            <figure class="team-portrait">
-              <img src="<?= $member->image()->url() ?>" alt="Portrait of <?= $member->title()->html() ?>" />
-            </figure>
-            
-            <div class="team-info">
-              <h3 class="team-name"><?= $member->title()->html() ?></h3>
-              <p class="team-position"><?= $member->position()->html() ?></p>
-              <div class="team-about text">
-                <?= $member->about()->kirbytext() ?>
-              </div>
-            </div>
-            
-            <div class="team-contact text">
-              <i>Phone:</i><br />
-              <?= kirbytag(['tel' => $member->phone()->html()]) ?><br />
-              <i>Email:</i><br />
-              <a href="mailto:<?= $member->email()->html() ?>"><?= $member->email()->html() ?></a><br />
-            </div>
-          </li>
-        <?php endforeach ?>
-      </ul>
-      
-    </section>
-
+    <div class="about-footer-container">
+      <?php snippet('footer') ?>  
+    </div>
   </main>
-
-<?php snippet('footer') ?>
+</div>

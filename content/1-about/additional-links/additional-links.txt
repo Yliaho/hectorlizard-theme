@@ -1,0 +1,61 @@
+Text: 
+
+----
+
+Title: Additional Links
+
+----
+
+Fieldone: (link: http://wikipedia.org text: Wikipedia)
+
+----
+
+Fieldtwo: (link: http://wikipedia.org text: Wikipedia)
+
+----
+
+Fieldthree: (link: http://wikipedia.org text: Wikipedia)
+
+----
+
+Fieldfour: (link: http://wikipedia.org text: Wikipedia)
+
+----
+
+Fieldfive: (link: http://wikipedia.org text: Wikipedia)
+
+----
+
+Fieldsix: 
+
+----
+
+Contacts: 
+
+- 
+  linkname: Facebook
+  linkurl: '#'
+- 
+  linkname: E-Mail
+  linkurl: yeees
+
+----
+
+Links: 
+
+- 
+  linkname: E-Mail
+  linkurl: mailto:thomas@thomaslegoff.com
+- 
+  linkname: Twitter
+  linkurl: https://twitter.com/HectorLizard
+  city: eeee
+- 
+  linkname: Facebook
+  linkurl: https://facebook.com/HectorLizard
+- 
+  linkname: Lego Instagram
+  linkurl: https://instagram.com/hectorlizard
+- 
+  linkname: Another one
+  linkurl: '#'

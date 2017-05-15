@@ -1,24 +1,29 @@
 title: About
 
-pages:
-  template: team
-  num: zero
+pages: true
 
-files: false
+files: true
 
 options: 
   template: false  
   status: false  
   
 fields:
+
+  aboutBody:
+    label: About Body
+    type: headline
+
   title:
     label: Title
     type: title
+    default: About
     
   intro:
     label: Intro
     type: textarea
-    
-  text:
-    label: Text
-    type: textarea
+    placeholder: Tell the world about yourself!
+
+  aboutContact:
+    label: <-- Next - use sub pages to add additional links to this page!
+    type: headline

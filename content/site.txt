@@ -1,13 +1,33 @@
-Title: Kirby Starterkit
+Title: Hector Lizard
 
 ----
 
-Author: Bastian Allgeier GmbH
+Author: Hector Lizard
 
 ----
 
-Description: This is Kirby's Starterkit.
+Twitter: HectorLizard
 
 ----
 
-Copyright: © 2009–(date: Year) (link: http://getkirby.com text: The Kirby Team)
+Facebook: HectorLizard
+
+----
+
+E-mail: 
+
+----
+
+Description: Hector Lizard Portofolio.
+
+----
+
+Copyright: © 2017–(date: Year) (link: https://github.com/Yliaho text: Joonas Yliaho)
+
+----
+
+Email: thomas@thomaslegoff.com
+
+----
+
+Instagram: HectorLizard

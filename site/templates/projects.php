@@ -1,19 +1,21 @@
 <?php snippet('header') ?>
+<?php snippet('_mobile-header')?>
 
-  <main class="main" role="main">
+<div id="body-wrapper">
+  <br>
+  <?php snippet('_pagemark') ?>
+  <div class="container-fluid">
+    <main id="main" class="main" role="main">
+        
+      <section class="projects-section">
+        
+        <div class="wrap wide">
+          <?php snippet('showcase') ?>
+        </div>
+        
+      </section>
 
-    <header class="wrap">
-      <h1><?= $page->title()->html() ?></h1>
-      <div class="intro text">
-        <?= $page->text()->kirbytext() ?>
-      </div>
-      <hr />
-    </header>
-      
-    <div class="wrap wide">    
-      <?php snippet('showcase') ?>
-    </div>
-
-  </main>
-
-<?php snippet('footer') ?>
+    </main>
+  </div>
+  <?php snippet('footer') ?>
+</div>

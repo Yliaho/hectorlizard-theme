@@ -3,24 +3,20 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 
   <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
   <meta name="description" content="<?= $site->description()->html() ?>">
 
+  <!-- bootstrap -->
+  <?= css('assets/css/bootstrap/bootstrap.min.css') ?>
+  <!-- custom style -->
   <?= css('assets/css/index.css') ?>
 
 </head>
-<body>
 
-  <header class="header wrap wide" role="banner">
-    <div class="grid">
-
-      <div class="branding column">
-        <a href="<?= url() ?>" rel="home"><?= $site->title()->html() ?></a>
-      </div>
-
-      <?php snippet('menu') ?>
-
-    </div>
-  </header>
+<body class="on-top">
+	<?php if($page->template() == 'home' || $page->template() == 'projects'): ?>
+		<?php snippet('_home-header') ?>
+	<?php endif; ?>

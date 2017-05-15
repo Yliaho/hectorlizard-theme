@@ -11,6 +11,25 @@ fields:
     label: Author
     type:  text
 
+  email:
+    label: Email
+    type: text
+
+  facebook:
+    label: Facebook
+    type: text
+    width: 1/3
+
+  twitter:
+    label: Twitter
+    type: text
+    width: 1/3
+
+  instagram:
+    label: Instagram
+    type: text
+    width: 1/3
+
   description:
     label: Description
     type:  textarea
@@ -18,3 +37,4 @@ fields:
   copyright:
     label: Copyright
     type:  textarea
+
