@@ -456,6 +456,12 @@ body.on-top #masthead {
   display: inline;
 }
 
+#mobile-header.home-mobile-header .title-container {
+  font-size: 15px;
+  display: inline;
+  opacity: 1!important;
+}
+
 .hamburger-menu {
   float: right;
 }
@@ -531,7 +537,7 @@ body.on-top #masthead {
   right: 0;
   left: 0;
   background-color: #fce1e6;
-  z-index: 50;
+  z-index: 5000000;
   padding: 0px 0px 0px 0px;
   opacity: 0;
   transition: opacity .3s ease-out;
@@ -542,16 +548,13 @@ body.on-top #masthead {
   align-items: center;
   opacity: 0;
   transform-origin: top;
-  animation: mobile-nav-fadein .8s cubic-bezier(0.12, 1.03, 0.26, 0.97) 1 forwards;
 }
 
 @keyframes mobile-nav-fadein {
   from {
-    transform: rotate3d(1, 0, 0, -80deg);
     opacity: 1;
   }
   to {
-    transform: rotate3d(1, 0, 0, 0deg);
     opacity: 1;
   }
 }
@@ -742,6 +745,10 @@ body.on-top #masthead {
   margin-top: 80px;
 }
 
+.footer #nav a:hover {
+  box-shadow: 0 1px black;
+}
+
 
 /*
  *  PROJECT PAGE
@@ -806,6 +813,12 @@ body.on-top #masthead {
  *  ABOUT
  */
 
+.about-hamburger-container {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 20px;
+}
+
 .about-content {
   display: flex;
   justify-content: space-between;
@@ -842,23 +855,35 @@ body.on-top #masthead {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  height: 500px;
+  height: 1000px;
   width: 215%;
   min-height: 300px;
   position: relative;
   pointer-events: none;
   transition: all .6s cubic-bezier(0.63, 0.15, 0.01, 0.99);
   left: -18vh;
+  position: relative;
 }
 
 .about-image:not(.fetched) {
   opacity: 0;
-  transform: scale(.8) translateX(-80px) translateY(80px);
+  transform: scale(1) translateX(-100px) translateY(80px);
 }
 
 .about-image.fetched {
   opacity: 1;
   transform: scale(1) translateX(0px) translateY(0px);
+}
+
+.sm-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .about-main {
@@ -897,6 +922,8 @@ body.on-top #masthead {
   flex-wrap: wrap;
   height: 4rem;
   align-content: flex-start;
+  position: relative;
+  z-index: 1;
 }
 
 .about-contact ul.contact-list li {
@@ -905,10 +932,17 @@ body.on-top #masthead {
   width: calc(100% / 3);
 }
 
+@media (min-width: 1075px) {
+  .hidden-mdHector-up {
+    display: none;
+  }
+}
+
 @media (max-width: 1075px) {
   .hidden-mdHector-down {
-    display: none!important;
+    display: none;
   }
+
   .about-right-margin {
     width: 100vw;
     height: 334px;
@@ -921,7 +955,21 @@ body.on-top #masthead {
   }
 }
 
-@charset "UTF-8";
+@media (min-width: 768px) {
+  .visibility-hidden-md-up {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .visibility-hidden-md-down {
+    visibility: hidden;
+  }
+  .visibility-hidden-md-up {
+    visibility: visible;
+  }
+}
+
 
 /*
  * CSS GLOBAL RESET
@@ -1242,7 +1290,6 @@ body.on-top #masthead {
   float: left;
 }
 
-
 /*
  * HEADER MENU
  */
@@ -1362,6 +1409,11 @@ body.on-top #masthead {
   z-index: 100;
 }
 
+.about-hamburger-container {
+  position: relative;
+  z-index: 90;
+}
+
 .mobile-header-content {
   padding: 0 20px;
 }
@@ -1469,11 +1521,9 @@ body.on-top #masthead {
 
 @keyframes mobile-nav-fadein {
   from {
-    transform: rotate3d(1, 0, 0, -80deg);
-    opacity: 1;
+    opacity: 0;
   }
   to {
-    transform: rotate3d(1, 0, 0, 0deg);
     opacity: 1;
   }
 }
@@ -1588,6 +1638,13 @@ body.on-top #masthead {
 .showcase-item:hover .showcase-thumb>img.thumb-overlay {
   transform: scale(1.05) translateY(8px) translate3d(0, 0, 0);
   transition: all .25s cubic-bezier(0.45, -0.02, 0.02, 1.53);
+}
+
+.showcase-item:active .showcase-thumb {
+  transform: scale(0.98);
+}
+.showcase-item:active .showcase-thumb>img:not(.thumb-overlay) {
+  box-shadow: 0 6px 36px -6px;
 }
 
 .showcase-item .showcase-thumb img {
@@ -1728,13 +1785,15 @@ body.on-top #masthead {
  *  ABOUT
  */
 
+.about-mobile-header #mobile-header {}
+
 .about-content {
   display: flex;
   justify-content: space-between;
 }
 
 .about-right-margin {
-  width: 24vw;
+  width: 30vw;
   height: 100vh;
 }
 
@@ -1742,9 +1801,10 @@ body.on-top #masthead {
   display: inline-block;
   background-color: #FCE1E6;
   height: 100vh;
-  width: 24vw;
+  width: 30vw;
   box-shadow: 0 100vh #FCE1E6, 0 200vh #FCE1E6, 0 300vh #FCE1E6;
   position: fixed;
+  left: 0;
 }
 
 .about-image-container {
@@ -1757,6 +1817,7 @@ body.on-top #masthead {
   float: right;
   overflow: visible;
   padding-bottom: 2em;
+  pointer-events: none;
 }
 
 .about-image {
@@ -1764,18 +1825,18 @@ body.on-top #masthead {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  height: 500px;
+  height: 800px;
   width: 215%;
   min-height: 300px;
   position: relative;
   pointer-events: none;
   transition: all .6s cubic-bezier(0.63, 0.15, 0.01, 0.99);
-  left: -18vh;
+  left: -130px;
 }
 
 .about-image:not(.fetched) {
   opacity: 0;
-  transform: scale(.8) translateX(-80px) translateY(80px);
+  transform: scale(1) translateX(-20px) translateY(0px);
 }
 
 .about-image.fetched {
@@ -1795,7 +1856,7 @@ body.on-top #masthead {
 .about-body,
 .about-contact {
   display: block;
-  max-width: 680px;
+  max-width: 608px;
 }
 
 .about-body p {
@@ -1809,8 +1870,13 @@ body.on-top #masthead {
   right: 0;
 }
 
+.about-body h3,
 .about-contact h3 {
-  padding: 1rem 0;
+  padding: 1.3rem 0 1.3rem 0;
+}
+
+.about-body p:first-of-type {
+  padding-top: 0;
 }
 
 .about-contact ul.contact-list {
@@ -1843,6 +1909,9 @@ body.on-top #masthead {
   .about-content {
     flex-direction: column;
   }
+  .about-right-margin {
+    display: none;
+  }
   .about-right-side {
     width: 100vw;
     height: 312px;
@@ -1850,6 +1919,7 @@ body.on-top #masthead {
     box-shadow: 0 0;
     display: flex;
     justify-content: center;
+    position: initial;
   }
   .about-image-container {
     display: flex;
@@ -1867,18 +1937,21 @@ body.on-top #masthead {
     background-repeat: no-repeat;
     background-position: center;
     display: block;
-    height: 500px;
+    height: 700px;
     min-width: 500px;
     left: initial;
     transition: opacity .6s cubic-bezier(0.63, 0.15, 0.01, 0.99);
   }
   .about-main {
-    margin-top: -40px;
+    margin-top: 0px;
     margin-left: 15px;
     margin-right: 15px;
   }
   .about-body,
   .about-contact {
     max-width: none;
+  }
+  .about-contact ul.contact-list {
+    margin-bottom: 2em;
   }
 }

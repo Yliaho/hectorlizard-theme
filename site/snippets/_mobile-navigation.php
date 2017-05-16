@@ -1,4 +1,5 @@
-<div class="mobile-nav hidden-md-up">
+<div>
+<div class="mobile-nav">
     <ul class="nav-list">
         <?php foreach($pages->visible() as $item): ?>
             <li class="menu-item<?= r($item->isOpen(), ' is-active') ?>">
@@ -18,4 +19,7 @@
     <div class="mobile-social">
         <?php snippet('_home-social') ?>
     </div>
+</div>
+
+
 </div>

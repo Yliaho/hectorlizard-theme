@@ -1,4 +1,4 @@
-<div id="nav" class="home-navigation <?php e($page->template('about'), ' hidden-mdHector-down') ?>">
+<div id="nav" class="home-navigation <?php e($page->template() == 'about', ' hidden-mdHector-down') ?>">
     <ul>
         <?php foreach($pages->visible() as $item): ?>
             <li class="menu-item<?= r($item->isOpen(), ' is-active') ?>">
