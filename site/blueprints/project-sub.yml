@@ -1,0 +1,11 @@
+title: Project Sub-Page
+
+files:
+  sortable: true
+
+pages: false
+
+fields:
+  text:
+    label: Text
+    type:  textarea

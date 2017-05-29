@@ -1,0 +1,35 @@
+title: Project
+
+files:
+  sortable: true
+
+pages: true
+
+fields:
+  title:
+    label: Title
+    type:  text
+    width: 3/4
+
+  year:
+    label: Year
+    type:  text
+    width: 1/4
+
+  description:
+    label: Description
+    type: textarea
+
+  tags:
+    label: Tags
+    type: text
+    width: 3/4
+
+  hex:
+    label: Project Color
+    type: text
+    width: 1/4
+
+  text:
+    label: Text
+    type:  textarea
