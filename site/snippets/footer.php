@@ -5,7 +5,6 @@
     </div>
   </footer>
   <?php echo js('assets/js/jquery-3.2.1.min.js') ?>
-  <?php echo js('assets/js/bootstrap.min.js') ?>
-  <?php echo js('assets/js/script.js') ?>
+  <?php echo js('assets/js/script_min.js') ?>
 </body>
 </html>

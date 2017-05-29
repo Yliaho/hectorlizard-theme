@@ -314,12 +314,16 @@ body.on-top #masthead {
   color: rgba(0, 0, 0, 0.75);
   text-decoration: none!important;
 }
+.site-header a:hover,
+#nav a:hover {
+  color: rgba(0, 0, 0, 1);
+  box-shadow: 0 1px rgba(0,0,0,.5)!important;
+}
 
 #masthead .site-title {
   width: 40%;
   float: left;
 }
-
 
 /*
  * HEADER MENU
@@ -371,7 +375,7 @@ body.on-top #masthead {
   background-size: 95vh;
   background-repeat: no-repeat;
   display: flex;
-  height: 100vh;
+  height: 106vh;
   align-items: flex-end;
   position: relative;
 }
@@ -459,7 +463,6 @@ body.on-top #masthead {
 #mobile-header.home-mobile-header .title-container {
   font-size: 15px;
   display: inline;
-  opacity: 1!important;
 }
 
 .hamburger-menu {
@@ -715,6 +718,10 @@ body.on-top #masthead {
   font-size: 26px;
 }
 
+.about-body h3 {
+  padding-top: 0!important;
+}
+
 .showcase-item .showcase-tags,
 .project-tags {
   padding-top: .3em;
@@ -745,8 +752,8 @@ body.on-top #masthead {
   margin-top: 80px;
 }
 
-.footer #nav a:hover {
-  box-shadow: 0 1px black;
+#nav a:hover {
+  box-shadow: 0 1px rgba(255,255,255,.5);
 }
 
 
@@ -843,7 +850,7 @@ body.on-top #masthead {
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  width: 65%;
+  width: 75%;
   padding-bottom: 88px;
   float: right;
   overflow: visible;
@@ -876,9 +883,9 @@ body.on-top #masthead {
 }
 
 .sm-image {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -942,7 +949,6 @@ body.on-top #masthead {
   .hidden-mdHector-down {
     display: none;
   }
-
   .about-right-margin {
     width: 100vw;
     height: 334px;
@@ -1290,6 +1296,7 @@ body.on-top #masthead {
   float: left;
 }
 
+
 /*
  * HEADER MENU
  */
@@ -1367,6 +1374,8 @@ body.on-top #masthead {
   float: right;
   transform: translateY(-5px);
 }
+
+
 
 .scroll-cta {
   position: absolute;
@@ -1643,6 +1652,7 @@ body.on-top #masthead {
 .showcase-item:active .showcase-thumb {
   transform: scale(0.98);
 }
+
 .showcase-item:active .showcase-thumb>img:not(.thumb-overlay) {
   box-shadow: 0 6px 36px -6px;
 }
@@ -1812,7 +1822,7 @@ body.on-top #masthead {
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  width: 65%;
+  width: 75%;
   padding-bottom: 88px;
   float: right;
   overflow: visible;
@@ -1825,13 +1835,14 @@ body.on-top #masthead {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  height: 800px;
-  width: 215%;
-  min-height: 300px;
+  height: 390vh;
+  width: 230%;
+  min-height: 910px;
+  max-height: 100px;
   position: relative;
   pointer-events: none;
   transition: all .6s cubic-bezier(0.63, 0.15, 0.01, 0.99);
-  left: -130px;
+  left: -180px;
 }
 
 .about-image:not(.fetched) {
@@ -1925,20 +1936,20 @@ body.on-top #masthead {
     display: flex;
     justify-content: center;
     flex-direction: initial;
-    height: 100%;
+    height: 235%;
     float: right;
     overflow: visible;
     padding: 0em;
     transform: rotate(140deg);
-    margin-top: -50px;
+    margin-top: -250px;
   }
   .about-image {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     display: block;
-    height: 700px;
-    min-width: 500px;
+    height: 500px;
+    min-width: 546px;
     left: initial;
     transition: opacity .6s cubic-bezier(0.63, 0.15, 0.01, 0.99);
   }

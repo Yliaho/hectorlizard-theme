@@ -1,4 +1,4 @@
-<div class="some-container">
+<div class="some-container hidden-sm-down">
     <ul>
         <li>
             <a href="https://facebook.com/<?= $site->Facebook() ?>">
