@@ -23,10 +23,20 @@ Icon
 /site/accounts/*
 !/site/accounts/index.html
 
+# Kirby
+# ---------------
+
+kirby/
+panel/
+content/
+
 # Avatars
 # ---------------
 
 /assets/avatars/*
 !/assets/avatars/index.html
 
-/npm_modules/*
+# npm
+# ---------------
+
+npm_modules/
