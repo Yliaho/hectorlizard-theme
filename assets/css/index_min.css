@@ -54,13 +54,6 @@ main#main:not(.about),.navigation-default-page {
 	margin: 0 80px;
 }
 
-@media (max-width: 768px) {
-
-	main#main:not(.about),.navigation-default-page {
-		margin: 0;
-	}
-}
-
 a {
 	color: rgba(0, 0, 0, 0.75);
 	text-decoration: none!important;
@@ -757,20 +750,13 @@ body.on-top #masthead {
 }
 
 
-@media (max-width: 768px) {
-
+@media (max-width: 576px) {
 	main#main:not(.about),.navigation-default-page {
 		margin: 0;
 	}
 }
 
-
-
-
-
-
-
-@media (min-width: 575px) {
+@media (min-width: 576px) {
 
 	body:not(.on-top) #masthead {
 		padding-top: 10px;
