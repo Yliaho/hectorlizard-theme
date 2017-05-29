@@ -880,7 +880,7 @@ body.on-top #masthead {
 	}
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
 	.showcase .showcase-item {
 		flex-basis: 100%;
 	}
