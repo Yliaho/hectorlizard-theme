@@ -58,13 +58,13 @@ a {
 	color: rgba(0, 0, 0, 0.75);
 	text-decoration: none!important;
 }
-a.default,.about-body a {
+a.default,.about-body a, .gallery-text a {
 	color: inherit!important;
 	position: relative;
 	z-index: 1;
 	transition: all 3.15s ease-out!important;
 }
-a.default:after,.about-body a:after {
+a.default:after,.about-body a:after, .gallery-text a:after {
 	content: "";
 	background-color: #FCE1E6;
 	position: absolute;
@@ -75,7 +75,7 @@ a.default:after,.about-body a:after {
 	left: 0px;
 	z-index: -1;
 }
-a.default:hover:after,.about-body a:hover:after {
+a.default:hover:after,.about-body a:hover:after, .gallery-text a:hover:after {
 	top: 0%;
 	bottom: 0%;
 	transition: all .05s ease-in;
