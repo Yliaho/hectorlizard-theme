@@ -517,7 +517,13 @@ body.on-top #masthead {
 }
 .project-title h3,.about-body h3,.about-contact h3 {
 	font-size: 26px;
+	display: inline-block;
 }
+
+.project-title h3 {
+	word-break: break-word;
+}
+
 .about-body h3 {
 	padding-top: 0!important;
 }

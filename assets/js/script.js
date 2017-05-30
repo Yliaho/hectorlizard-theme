@@ -148,6 +148,12 @@ function loadImage() {
 }
 
 /*
+ *  project title scale
+ */
+
+ // maybe someday
+ 
+/*
  *  smooth scrolling on anchor
  */
 
