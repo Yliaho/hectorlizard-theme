@@ -55,15 +55,15 @@ $projectSubs = $page->children()->visible();
                         <img class="gallery-image img-fluid" src="<?= $thumb->url() ?>" alt="">
                       <?php endif ?>
                   </div>
-                  <div class="gallery-text">
-                    <div class="row justify-content-end">
-                      <div class="col-lg-8 col-md-9">
-                        <?php if($projectSub->text()): ?>
-                          <?= $projectSub->text()->kirbytext() ?>
-                        <?php endif ?>
+                  <?php if(!$projectSub->text()->empty()): ?>
+                    <div class="gallery-text">
+                      <div class="row justify-content-end">
+                        <div class="col-lg-8 col-md-9">
+                            <?= $projectSub->text()->kirbytext() ?>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  <?php endif ?>
                 </div>
               <?php endforeach ?>           
             </div>
