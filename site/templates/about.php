@@ -58,7 +58,7 @@ $links = $page->children()->first()->links()->toStructure();
             <ul class="contact-list">
               <?php foreach($links as $link): ?>
                 <li>
-                  <a class="default" href="<?= $link->linkurl()->url() ?>"><?= $link->linkname()->html() ?></a>
+                  <a class="default" href="<?= $link->linkurl()->html() ?>"><?= $link->linkname()->html() ?></a>
                 </li>
               <?php endforeach ?>
             </ul>

@@ -39,7 +39,7 @@ if(isset($limit)) $projects = $projects->limit($limit);
             <h4 class="showcase-tags"><?= $project->tags()->html() ?></h4>
           </div>
           <div class="project-description">
-            <p><?= $project->description()->html() ?></p>
+            <p><?= $project->description()->kirbytext() ?></p>
           </div>
         </a>
     </li>

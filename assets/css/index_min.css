@@ -58,13 +58,13 @@ a {
 	color: rgba(0, 0, 0, 0.75);
 	text-decoration: none!important;
 }
-a.default,.about-body a, .gallery-text a {
+a.default,.about-body a, .gallery-text a, .project-desc a {
 	color: inherit!important;
 	position: relative;
 	z-index: 1;
 	transition: all 3.15s ease-out!important;
 }
-a.default:after,.about-body a:after, .gallery-text a:after {
+a.default:after,.about-body a:after, .gallery-text a:after, .project-desc a:after {
     content: "";
     box-shadow: inset 0 -4px #FCE1E6;
     position: absolute;
@@ -75,7 +75,7 @@ a.default:after,.about-body a:after, .gallery-text a:after {
     left: 0px;
     z-index: -1;
 }
-a.default:hover:after,.about-body a:hover:after, .gallery-text a:hover:after {
+a.default:hover:after,.about-body a:hover:after, .gallery-text a:hover:after, .project-desc a:hover:after {
 	box-shadow: inset 0 -32px #FCE1E6;
 	transition: all .05s ease-in;
 }
